@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 read -p 'Digite el primer valor que desea multiplicar: ' A
 read -p 'Digite el segundo valor que desea multiplicar: ' B

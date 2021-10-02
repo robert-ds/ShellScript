@@ -7,10 +7,12 @@ let resto=N%2
 
 if [ $resto -eq 0 ]; then
 
+clear
 echo "El número" $N "es par"
 
 else
 
+clear
 echo "El número" $N "es impar"
 
 fi

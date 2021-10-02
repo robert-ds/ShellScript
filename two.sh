@@ -10,6 +10,6 @@ suma=$[ $NOTAISO + $NOTAPARE + $NOTABD ]
 
 let media=suma/3
 
-echo "La media es $media" 
+echo "La media es $media"
 
 

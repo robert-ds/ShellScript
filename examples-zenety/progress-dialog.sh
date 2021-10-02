@@ -1,0 +1,1 @@
+find $HOME -name '*.sh' | zenity --progress --pulsate

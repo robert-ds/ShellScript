@@ -1,0 +1,1 @@
+zenity  --question --title "Alert"  --text "Microsoft Windows has been found! Would you like to remove it?"
