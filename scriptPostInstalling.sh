@@ -3,8 +3,11 @@
 
 #!/bin/bash
 
+# Robert Vásquez 2021
+# Versión 1.0
+
 #Menú de Opciones
-function main_menu {
+main_menu() {
   echo '1. Instalar paquetes esenciales del sistema, includo ubuntu-extras-restricted.';
   echo '2. Instalar pack de paquetes tools y apps básicas como: elinks, git, etc. ';
   echo '3. Instalar huevos de pascuas como: sl, cowsay, figlet, etc.  ';
@@ -15,6 +18,7 @@ function main_menu {
 
   #Primero limpia pantalla luego saluda y por ultimo actualiza el sistema
   clear;
+  echo 'Autor: Rober Vásquez. 2021'; sleep 3s;
   echo '.............:::::Primero se actualizara el Sistema:::::............'; sleep 3s;
   #sudo apt-get update && sudo apt-get upgrade -y;
 
@@ -56,10 +60,11 @@ function main_menu {
       sudo apt-get install -y sl figlet cowsay;;
       #incluir validaciones en caso de que algo suceda al instalar, por ejemplo con if[]
     4)
-      echo 'Selecionaste salir.'; sleep 1s; clear; exit;;
+      echo 'Selecionaste salir.'; sleep 1s; clear; 
+      echo 'CHAO!';sleep 3s; exit;;
     *)
-      echo 'Porfavor Seleciona una opción valida'; sleep 2s;
-      menu;
+      echo 'Porfavor Seleciona una opción valida'; sleep 2s; clear;
+      main_menu;
       #encontrar la forma de retornar al menu
   esac
 
