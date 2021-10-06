@@ -3,11 +3,21 @@
 
 #!/bin/bash
 
+#Menú de Opciones
+function main_menu {
+  echo '1. Instalar paquetes esenciales del sistema, includo ubuntu-extras-restricted.';
+  echo '2. Instalar pack de paquetes tools y apps básicas como: elinks, git, etc. ';
+  echo '3. Instalar huevos de pascuas como: sl, cowsay, figlet, etc.  ';
+  echo '4. Salir ';
+  read -p '' opc;
+  echo '';
+}
+
   #Primero limpia pantalla luego saluda y por ultimo actualiza el sistema
   clear;
   echo '.............:::::Primero se actualizara el Sistema:::::............'; sleep 3s;
-  sudo apt-get update && sudo apt-get upgrade -y;
- 
+  #sudo apt-get update && sudo apt-get upgrade -y;
+
   #Comprobar si la actualización anterior fue ejecutada con exito
   if [$?]; then
     clear;
@@ -20,7 +30,7 @@
     sleep 4s; clear;
     #echo 'CHAO!';sleep 4s; exit;
   fi
-  
+
   #Mensaje antesala para el menú de opciones
   echo '#######################################';
   echo '#                                     #';
@@ -30,14 +40,7 @@
   echo '#######################################';
   echo ''; sleep 5s; clear;
 
-  #Menú de Opciones
-  echo '1. Instalar paquetes esenciales del sistema, includo ubuntu-extras-restricted.';
-  echo '2. Instalar pack de paquetes tools y apps básicas como: elinks, git, etc. ';
-  echo '3. Instalar huevos de pascuas como: sl, cowsay, figlet, etc.  ';
-  echo '4. Salir '; 
-  read -p '' opc;
-
-  echo '';
+  main_menu;
 
   case $opc in
     1)
@@ -55,15 +58,8 @@
     4)
       echo 'Selecionaste salir.'; sleep 1s; clear; exit;;
     *)
-      echo 'Porfavor Seleciona una opción valida'; sleep 2s;;
+      echo 'Porfavor Seleciona una opción valida'; sleep 2s;
+      menu;
       #encontrar la forma de retornar al menu
   esac
-  
-  
-
-
-
-
-
-
 
