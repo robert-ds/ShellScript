@@ -14,11 +14,47 @@ main_menu() {
   echo '4. Salir ';
   read -p '' opc;
   echo '';
+
+  case $opc in
+    1)
+      echo 'Selecionaste la opción 1. Se inatalarán los paquetes esenciales del sistema'; sleep 4s; clear;
+      sudo apt-get install ubuntu-extras-restricted -y;
+      installing_state;
+      main_menu;;
+    2)
+      echo 'Seleccionaste la opción 2. Se instalará elinks, git y otros.'; sleep 4s; clear;
+      sudo apt-get install -y elinks git;
+      installing_state;
+      main_menu;;
+    3)
+      echo 'Selecionaste la opción 3. Se instalarán huevos de Pascua como: sl, figlet, cowsay.'; sleep 4s; clear;
+      sudo apt-get install -y sl figlet cowsay;
+      installing_state;
+      main_menu;;
+    4)
+      echo 'Selecionaste salir.'; sleep 1s; clear;
+      echo 'CHAO!';sleep 3s; exit;;
+    *)
+      echo 'Porfavor Seleciona una opción valida'; sleep 2s; clear;
+      main_menu;
+  esac
+}
+
+installing_state(){
+  if [$?]; then
+    echo 'Todo se Instalo Satisfactoriamente';
+    sleep 3s; clear;
+  else
+    clear;
+    echo '¡Ha ocurrido un problema!';
+    echo 'No se Pudo Instalar Nada';
+    sleep 3s; clear;
+  fi
 }
 
   #Primero limpia pantalla luego saluda y por ultimo actualiza el sistema
   clear;
-  echo 'Autor: Rober Vásquez. 2021'; sleep 3s;
+  echo '.............:::::Autor: Robert Vásquez. 2021::::::::::::............'; sleep 3s;
   echo '.............:::::Primero se actualizara el Sistema:::::............'; sleep 3s;
   #sudo apt-get update && sudo apt-get upgrade -y;
 
@@ -46,25 +82,5 @@ main_menu() {
 
   main_menu;
 
-  case $opc in
-    1)
-      echo 'Selecionaste la opción 1. Se inatalarán los paquetes esenciales del sistema'; sleep 4s; clear;
-      sudo apt-get install -y ubuntu-extras-restricted;;
-      #incluir validaciones en caso de que algo suceda al instalar, por ejemplo con if[]
-    2)
-      echo 'Seleccionaste la opción 2. Se instalará elinks, git y otros.'; sleep 4s; clear;
-      sudo apt-get install -y elinks git;;
-      #incluir validaciones en caso de que algo suceda al instalar, por ejemplo con if[]
-    3)
-      echo 'Selecionaste la opción 3. Se instalarán huevos de Pascua como: sl, figlet, cowsay.'; sleep 4s; clear;
-      sudo apt-get install -y sl figlet cowsay;;
-      #incluir validaciones en caso de que algo suceda al instalar, por ejemplo con if[]
-    4)
-      echo 'Selecionaste salir.'; sleep 1s; clear; 
-      echo 'CHAO!';sleep 3s; exit;;
-    *)
-      echo 'Porfavor Seleciona una opción valida'; sleep 2s; clear;
-      main_menu;
-      #encontrar la forma de retornar al menu
-  esac
+
 
