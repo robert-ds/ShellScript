@@ -23,12 +23,12 @@ main_menu() {
       main_menu;;
     2)
       echo 'Seleccionaste la opción 2. Se instalará elinks, git y otros.'; sleep 4s; clear;
-      sudo apt-get install -y elinks git;
+      sudo apt-get install -y elinks git vlc;
       installing_state;
       main_menu;;
     3)
       echo 'Selecionaste la opción 3. Se instalarán huevos de Pascua como: sl, figlet, cowsay.'; sleep 4s; clear;
-      sudo apt-get install -y sl figlet cowsay;
+      sudo apt-get install -y sl figlet cowsay elinks;
       installing_state;
       main_menu;;
     4)
