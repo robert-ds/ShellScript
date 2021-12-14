@@ -8,7 +8,7 @@
 
 #Menú de Opciones
 main_menu() {
-  echo '1. Instalar paquetes esenciales del sistema, includo ubuntu-extras-restricted.';
+  echo '1. Instalar paquetes esenciales del sistema, includo ubuntu-restricted-extras.';
   echo '2. Instalar pack de paquetes tools y apps básicas como: elinks, git, etc. ';
   echo '3. Instalar huevos de pascuas como: sl, cowsay, figlet, etc.  ';
   echo '4. Salir ';
@@ -18,17 +18,17 @@ main_menu() {
   case $opc in
     1)
       echo 'Selecionaste la opción 1. Se inatalarán los paquetes esenciales del sistema'; sleep 4s; clear;
-      sudo apt-get install ubuntu-extras-restricted -y;
+      sudo apt-get install ubuntu-restricted-extras -y;
       installing_state;
       main_menu;;
     2)
       echo 'Seleccionaste la opción 2. Se instalará elinks, git y otros.'; sleep 4s; clear;
-      sudo apt-get install -y elinks git vlc;
+      sudo apt-get install -y elinks git vlc vim;
       installing_state;
       main_menu;;
     3)
       echo 'Selecionaste la opción 3. Se instalarán huevos de Pascua como: sl, figlet, cowsay.'; sleep 4s; clear;
-      sudo apt-get install -y sl figlet cowsay elinks;
+      sudo apt-get install -y sl figlet cowsay;
       installing_state;
       main_menu;;
     4)
