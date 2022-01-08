@@ -18,7 +18,7 @@ main_menu() {
   case $opc in
     1)
       echo 'Selecionaste la opción 1. Se inatalarán los paquetes esenciales del sistema'; sleep 4s; clear;
-      sudo apt-get install ubuntu-restricted-extras gnome-tweak-tool net-tools -y;
+      sudo apt-get install software-properties-common build-essential ubuntu-restricted-extras gnome-tweak-tool net-tools -y;
       installing_state;
       main_menu;;
     2)
