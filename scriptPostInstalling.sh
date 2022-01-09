@@ -23,7 +23,7 @@ main_menu() {
       main_menu;;
     2)
       echo 'Seleccionaste la opción 2. Se instalará elinks, git y otros.'; sleep 4s; clear;
-      sudo apt-get install -y elinks lynx git vlc vim plank tilda classicmenu-indicator chrome-gnome-shell gnome-shell-extensions mpv;
+      sudo apt-get install -y elinks lynx git ssh vlc vim plank tilda classicmenu-indicator chrome-gnome-shell gnome-shell-extensions mpv;
       installing_state;
       main_menu;;
     3)
