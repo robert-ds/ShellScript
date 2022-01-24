@@ -18,12 +18,12 @@ main_menu() {
   case $opc in
     1)
       echo 'Selecionaste la opción 1. Se inatalarán los paquetes esenciales del sistema'; sleep 4s; clear;
-      sudo apt-get install ubuntu-restricted-extras gnome-tweak-tool -y;
+      sudo apt-get install software-properties-common build-essential ubuntu-restricted-extras gnome-tweak-tool net-tools -y;
       installing_state;
       main_menu;;
     2)
       echo 'Seleccionaste la opción 2. Se instalará elinks, git y otros.'; sleep 4s; clear;
-      sudo apt-get install -y elinks git vlc vim plank tilda classicmenu-indicator chrome-gnome-shell gnome-shell-extensions mpv;
+      sudo apt-get install -y elinks lynx git ssh vlc vim plank tilda classicmenu-indicator chrome-gnome-shell gnome-shell-extensions mpv;
       installing_state;
       main_menu;;
     3)
